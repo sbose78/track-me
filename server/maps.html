@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+      <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+
+
+       <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+      
+      socket.on('maps', function(msg){
+        var latlong = msg.split(",");
+	var lat = latlong[0];
+	var lon = latlong[1];
+	GetMap(lat,lon);	
+      });
+
+      function GetMap(vlat,vlon)
+      {   
+
+		 //var lat = document.getElementById("lat");
+		 //var vlat = lat.value;
+		 //var lon = document.getElementById("lon");
+		 //var vlon = lon.value;
+         var map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), 
+                           {credentials: "AjKJXcRiwrjiYXRDujWnANn4z2SqOBQyiOVf2epxb15UjaBb9cZ5gCppQst7HvSw",
+                            center: new Microsoft.Maps.Location(vlat, vlon),
+                            mapTypeId: Microsoft.Maps.MapTypeId.road,
+                            zoom: 7});
+      }
+      </script>
+   </head>
+   <body >
+		<!--input type="text" id="lat"/-->
+		<!--input type="text" id="lon"/-->
+		<!--input type="button" id="updateMap" onclick="GetMap();"/-->
+		
+      <div id='mapDiv' style="position:relative; width:400px; height:400px;"></div>  
+	   	
+   </body>
+</html>
+
