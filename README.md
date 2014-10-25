@@ -1,7 +1,7 @@
 # Tracker app. 
 
 
-[Getting Started](http://chat.sbose.in:3000/docs) guide 
+[Applicaion link](http://chat.sbose.in:3000/docs) ( not up now )
 
 ### Data flow to *start* tracking.
 
