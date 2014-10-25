@@ -3,7 +3,7 @@
 
 [Getting Started](http://chat.sbose.in:3000/docs) guide 
 
-### Data flow for tracking.
+### Data flow to *start* tracking.
 
 There are 3 actors in this system. 
 
@@ -40,7 +40,7 @@ There are 3 actors in this system.
 - update the MAP on the app UI.
 
 
-### Data flow for Stop tracking
+### Data flow for *Stop* tracking
 
 
 #### The receptor device.
