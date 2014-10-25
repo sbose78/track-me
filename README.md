@@ -40,7 +40,7 @@ There are 3 actors in this system.
 - update the MAP on the app UI.
 
 
-### Data flow for *Stop* tracking
+### Data flow to  *Stop* tracking
 
 
 #### The receptor device.
