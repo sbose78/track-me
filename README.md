@@ -52,7 +52,7 @@ There are 3 actors in this system.
 
 #### The relay server
 
-- A notification is sent to the broadcaster device "Stop sending your location, ass ".
+- A notification is sent to the broadcaster device "Stop sending your location, toga ".
 - The user clicks on the notification and the app stops sending the HTTP requests to the relay server.
 
 
