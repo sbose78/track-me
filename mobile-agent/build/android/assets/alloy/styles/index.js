@@ -1,1 +1,0 @@
-module.exports = [{"isClass":true,"priority":10000.0007,"key":"container","style":{top:Alloy.Globals.winTop,}},{"isId":true,"priority":100000.0006,"key":"index","style":{backgroundColor:"#fff",fullscreen:false,exitOnClose:true,}}];
