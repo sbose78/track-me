@@ -36,3 +36,14 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
+# For mobile agent
+.DS_Store
+Resources
+build.log
+build
+npm-debug.log
+tmp
+.map
+.project
+.settings
+Thumbs.db

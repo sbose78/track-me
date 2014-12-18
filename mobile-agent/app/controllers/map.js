@@ -6,7 +6,7 @@ $.map.addEventListener('click', function(e) {
 
 exports.addAnnotation = function(geodata) {
 	var annotation = Alloy.createController('annotation', {
-		title: geodata.title,
+		title: 'geodata.title',
 		latitude: geodata.coords.latitude,
 		longitude: geodata.coords.longitude
 	});

@@ -1,4 +1,3 @@
- 
 var init = function() {
 	Ti.Geolocation.purpose = 'Koch Pipeline Public Awareness App';
  
@@ -37,7 +36,7 @@ var init = function() {
  
 var checkGeoPermission = function() {
 	if (Ti.Geolocation.locationServicesEnabled === false) {
-		console.log(  "Ti.Geolocation.locationServicesEnabled === false"  )
+		console.log(  "Ti.Geolocation.locationServicesEnabled === false"  );
 	} else {
 		
 		if (OS_IOS) {
@@ -45,7 +44,7 @@ var checkGeoPermission = function() {
 		
 		
 			if (authorization == Ti.Geolocation.AUTHORIZATION_DENIED) {
-				console.log("Variable scope issues -- authorization ==  Ti.Geolocation.AUTHORIZATION_DENIED which means You have disallowed App from running geolocation services." )
+				console.log("Variable scope issues -- authorization ==  Ti.Geolocation.AUTHORIZATION_DENIED which means You have disallowed App from running geolocation services." );
 			} 
 			else if (authorization == Ti.Geolocation.AUTHORIZATION_RESTRICTED) {
 				console.log( " authorization == Ti.Geolocation.AUTHORIZATION_RESTRICTED " );
@@ -65,6 +64,7 @@ var updateGeolocation= function (e) {
 	
 	console.log("[ SBOSE ] Location found , latitude : "  +  e.coords.latitude  + " longitude "  + e.coords.longitude);
 	
+	
 };
  
 Ti.App.addEventListener('getCurrentPosition', function() {
@@ -73,3 +73,6 @@ Ti.App.addEventListener('getCurrentPosition', function() {
  
 //Public API
 exports.init = init;
+exports.generateLocation = function(callback){
+	Ti.Geolocation.getCurrentPosition(callback);
+};
